@@ -9,7 +9,6 @@
         "@schematics/angular:component": {
           "styleext": "scss",
           "changeDetection": "OnPush",
-          "skipTests": true,
           "lintFix": true,
           "skipImport": true
         },

@@ -5,7 +5,19 @@
   "projects": {
     "Matrix": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "styleext": "less",
+          "changeDetection": "OnPush",
+          "skipTests": true,
+          "lintFix": true,
+          "skipImport": true
+        },
+        "@schematics/angular:service": {
+          "flat": true,
+          "skipTests": true
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -100,23 +112,10 @@
             "tsConfig": [
               "tsconfig.app.json",
               "tsconfig.spec.json",
-              "e2e/tsconfig.json"
             ],
             "exclude": [
               "**/node_modules/**"
             ]
-          }
-        },
-        "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
-          "options": {
-            "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "Matrix:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "Matrix:serve:production"
-            }
           }
         }
       }

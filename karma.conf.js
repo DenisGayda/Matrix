@@ -21,12 +21,11 @@ module.exports = function (config) {
       fixWebpackSourcePaths: true
     },
     reporters: ['progress', 'kjhtml'],
-    port: 9876,
+    port: 4000,
     colors: true,
     logLevel: config.LOG_INFO,
-    autoWatch: true,
-    browsers: ['Chrome'],
-    singleRun: false,
-    restartOnFileChange: true
+    autoWatch: false,
+    browsers: ['ChromeHeadless'],
+    singleRun: true,
   });
 };

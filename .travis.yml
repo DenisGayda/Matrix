@@ -5,18 +5,26 @@ branches:
   only:
     - master
     - develop
+apt:
+  sources:
+    - google-chrome
+  packages:
+    - google-chrome-stable
+    - google-chrome-beta
 services:
   - xvfb
-addons:
-  chrome: stable
-before_script:
+before_install:
+  - export CHROME_BIN=chromium-browser
   - export DISPLAY=:99.0
-install:
-  - npm set progress=false
-  - npm install
+  - sh -e /etc/init.d/xvfb start
+before_script:
+  - npm install -g firebase-tools
+  - npm install -g @angular/cli
+  - npm install -g @agm/core
+  - npm install -g karma
 script:
   - ng lint
-  - npm run test
-  - npm run build
+  - ng test
+  - ng build --prod --aot
 after_success:
   - firebase deploy --project matrix-fe55c --token $FIREBASE_TOKEN

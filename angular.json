@@ -7,7 +7,7 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "styleext": "less",
+          "styleext": "scss",
           "changeDetection": "OnPush",
           "skipTests": true,
           "lintFix": true,

@@ -1,16 +1,22 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
-import { TableService } from '../../services/table.service';
 
 @Component({
   selector: 'app-overview',
   templateUrl: './overview.component.html',
-  styleUrls: ['./overview.component.less'],
+  styleUrls: ['./overview.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class OverviewComponent implements OnInit {
 
+  public arr: string[] = ['Employee', 'Tech Interview Date', 'Before assessment level', 'Project', 'Project/Resource Manager', 'Interviewer'];
 
-  constructor(private data: TableService) { }
+  public skills: Array<string> = ['', 'J1', 'J2', 'J3', 'M1', 'M2', 'S', 'Ассесмент ранее не проводился', 'Trainee'];
+
+  public managers: string[] = ['', 'Василенко Виталий', 'Григорьев Александр', 'Педан Александр'];
+
+  
+  constructor() { }
+
 
   ngOnInit() {
   }

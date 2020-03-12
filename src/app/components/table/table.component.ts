@@ -7,7 +7,7 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TableComponent {
-
+// массив временный, для проверки, пока не подключены сервисы от Стаса и Саши
   levelDescription: object [] = [
     {column1: '-', column2: '- опрос по этой теме во время интервью не производился'},
     {column1: 'None', column2: '- нет знаний по теме'},

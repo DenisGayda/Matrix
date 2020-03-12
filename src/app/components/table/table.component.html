@@ -1,5 +1,5 @@
 
 <app-level-description-header></app-level-description-header>
 <div *ngFor="let item of levelDescription">
-  <app-header-row [column1] = "item.column1" [column2] = "item.column2"></app-header-row>
+  <app-header-row [obj] = "item"></app-header-row>
 </div>

@@ -1,5 +1,4 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { LevelDescriptionHeaderComponent } from './level-description-header.component';
 
 describe('LevelDescriptionHeaderComponent', () => {

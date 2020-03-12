@@ -1,8 +1,12 @@
-<div class="table">
-  <input type="text" value="{{ column1 }}">
-  <input type="text" value="{{ column2 }}" *ngIf="typeof (column2); else select">
+<div class="table" >
 
-  <ng-template #select>
-    // Будет компонент Алексея
-  </ng-template>
+  <ng-container *ngFor="let item of makeArr()">
+    <input type="text" value="{{ item }}" *ngIf="typeof(item); else select">
+    <ng-template #select>
+      <!--Будет компонент Алексея-->
+    </ng-template>
+  </ng-container>
+
 </div>
+
+

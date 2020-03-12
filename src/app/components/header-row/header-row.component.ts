@@ -8,10 +8,21 @@ import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 })
 
 export class HeaderRowComponent {
-  @Input() column1;
-  @Input() column2;
+  @Input() obj;
+
+  arr = [];
 
   typeof(item) {
     return typeof item === 'string';
+  }
+
+  makeArr() {
+    for (const key in this.obj) {
+      if (this.obj.hasOwnProperty(key)) {
+      this.arr.push(this.obj[key]);
+      }
+    }
+
+    return this.arr;
   }
 }

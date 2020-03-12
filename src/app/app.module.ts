@@ -8,7 +8,7 @@ import { OverviewComponent } from './components/overview/overview.component';
   declarations: [
     AppComponent,
     TableComponent,
-    OverviewComponent
+    OverviewComponent,
   ],
   imports: [
     BrowserModule,

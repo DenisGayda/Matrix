@@ -1,19 +1,17 @@
 import { async, TestBed } from '@angular/core/testing';
-import { TableComponent } from './table.component';
-import { OverviewComponent } from '../overview/overview.component';
+import { OverviewComponent } from './overview.component';
 
-describe('TableComponent', () => {
+describe('OverviewComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        TableComponent,
         OverviewComponent,
       ],
     }).compileComponents();
   }));
 
   it('should create the app', () => {
-    const fixture = TestBed.createComponent(TableComponent);
+    const fixture = TestBed.createComponent(OverviewComponent);
     const app = fixture.debugElement.componentInstance;
 
     expect(app).toBeTruthy();

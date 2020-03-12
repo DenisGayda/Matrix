@@ -4,18 +4,18 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
   selector: 'app-overview',
   templateUrl: './overview.component.html',
   styleUrls: ['./overview.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class OverviewComponent {
 
-  //Move to service
+  // Move to service
   public overview: object[] = [
     {column1: 'Employee', column2: ''},
     {column1: 'Tech Interview Date', column2: ''},
     {column1: 'Before assessment level', column2: ['', 'J1', 'J2', 'J3', 'M1', 'M2', 'S', 'Ассесмент ранее не проводился', 'Trainee']},
     {column1: 'Project', column2: ''},
     {column1: 'Project/Resource Manager', column2: ['', 'Василенко Виталий', 'Григорьев Александр', 'Педан Александр']},
-    {column1: 'Interviewer', column2: ''}
+    {column1: 'Interviewer', column2: ''},
   ];
 
 }

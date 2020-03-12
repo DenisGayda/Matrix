@@ -7,14 +7,26 @@ import { HttpClient } from '@angular/common/http';
 export class TableDataService {
 
   public url = 'assets/data.json';
+  public data;
+
   constructor(private http: HttpClient) {
-    this.getData('test');
+    //this.data = this.http.get(this.url)
+    // Object.defineProperty(this.data,'skills',{
+    //   enumerable: false,
+    //   configurable: false,
+    //   writable: false,
+    //   value: 'someval'
+    // })
   }
-  getData(sectionName) {
-    this.http.get(this.url).subscribe(
-      data => {
-        console.log(data[sectionName]);
-      }
-    );
-  }
+
+
+  receiveData() {
+    return Object.defineProperty(this.http.get(this.url), 'skills', {
+      enumerable: false,
+      configurable:true,
+      writable:true,
+      value:{'level':147}
+    })
+    }
+
 }

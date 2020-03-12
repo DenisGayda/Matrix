@@ -9,13 +9,16 @@ import { TableDataService } from '../../services/table-data.service';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TableComponent implements OnInit {
-
+  public user: any = {info: 'some'}
 
   constructor(public tableDataService: TableDataService) {
 
   }
-  ngOnInit(){
-
+  ngOnInit() {
+    this.tableDataService.receiveData().subscribe( data => this.changeUser(data));
   }
 
+  changeUser(val) {
+    this.user = val;
+  }
 }

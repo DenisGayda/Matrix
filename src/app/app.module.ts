@@ -20,5 +20,4 @@ import { HeaderRowComponent } from './components/header-row/header-row.component
 })
 
 export class AppModule {
-
 }

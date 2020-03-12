@@ -1,4 +1,6 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectionStrategy, OnInit, Input } from '@angular/core';
+import { TableDataService } from '../../services/table-data.service';
+
 
 @Component({
   selector: 'app-table',
@@ -6,4 +8,14 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
   styleUrls: ['./table.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class TableComponent {}
+export class TableComponent implements OnInit {
+
+
+  constructor(public tableDataService: TableDataService) {
+
+  }
+  ngOnInit(){
+
+  }
+
+}

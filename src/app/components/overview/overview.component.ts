@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-overview',
@@ -6,19 +6,16 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
   styleUrls: ['./overview.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class OverviewComponent implements OnInit {
+export class OverviewComponent {
 
-  public arr: string[] = ['Employee', 'Tech Interview Date', 'Before assessment level', 'Project', 'Project/Resource Manager', 'Interviewer'];
-
-  public skills: Array<string> = ['', 'J1', 'J2', 'J3', 'M1', 'M2', 'S', 'Ассесмент ранее не проводился', 'Trainee'];
-
-  public managers: string[] = ['', 'Василенко Виталий', 'Григорьев Александр', 'Педан Александр'];
-
-  
-  constructor() { }
-
-
-  ngOnInit() {
-  }
+  //Move to service
+  public overview: object[] = [
+    {column1: 'Employee', column2: ''},
+    {column1: 'Tech Interview Date', column2: ''},
+    {column1: 'Before assessment level', column2: ['', 'J1', 'J2', 'J3', 'M1', 'M2', 'S', 'Ассесмент ранее не проводился', 'Trainee']},
+    {column1: 'Project', column2: ''},
+    {column1: 'Project/Resource Manager', column2: ['', 'Василенко Виталий', 'Григорьев Александр', 'Педан Александр']},
+    {column1: 'Interviewer', column2: ''}
+  ];
 
 }

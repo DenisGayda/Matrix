@@ -1,18 +1,2 @@
-<div class="overview">Owerview</div>
-<div *ngFor="let info of arr; let i = index" class="table">
-  <ng-container *ngIf="i !== 2 && i !== 4; else select">
-    <input class="info" type="text" placeholder="{{ info }}">
-    <input class="input" type="text">  
-  </ng-container>
-  <ng-template #select>    
-    <input class="info" type="text" placeholder="{{ info }}">
-    <select name="select" class="input">
-      <ng-container *ngIf="i === 2"> 
-      <option *ngFor="let skill of skills; let idx = index" value="idx">{{ skill }}</option>
-      </ng-container>
-      <ng-container *ngIf="i === 4"> 
-      <option *ngFor="let manager of managers; let idx = index" value="idx">{{ manager }}</option>
-      </ng-container>
-  </select>
-  </ng-template>
-</div>
+<app-overview-header></app-overview-header>
+<app-header-row *ngFor="let obj of overview" [column1]="obj.column1" [column2]="obj.column2"></app-header-row>

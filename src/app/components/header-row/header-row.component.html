@@ -1,0 +1,7 @@
+<div class="table">
+  <input type="text" value="{{ column1 }}" class="info">
+  <input type="text" value="{{ column2 }}" *ngIf="typeof(column2); else select">
+  <ng-template #select>
+    <app-select [arr]="column2"></app-select>
+  </ng-template>
+</div>

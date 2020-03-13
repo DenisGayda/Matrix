@@ -17,4 +17,7 @@ export class Data {
   ];
 
   static levelDescriptionHeader = [ 'Level', 'Description'];
+
+  static softwareAndDevelopmentProcessHeader = ['Software and Development Process', 'SKILLS', 'Self-assessment',
+    'CURRENT LEVEL', 'NEXT LEVEL', 'COMMENTS', 'Literature'];
 }

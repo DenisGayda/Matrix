@@ -2,6 +2,7 @@ import { async, TestBed } from '@angular/core/testing';
 import { TableComponent } from './table.component';
 import { LevelDescriptionHeaderComponent } from '../level-description-header/level-description-header.component';
 import { HeaderRowComponent } from '../header-row/header-row.component';
+import { HeaderSoftwareAndDevelopmentProcessComponent } from '../header-software-and-development-process/header-software-and-development-process.component';
 
 describe('TableComponent', () => {
   beforeEach(async(() => {
@@ -10,6 +11,7 @@ describe('TableComponent', () => {
         TableComponent,
         LevelDescriptionHeaderComponent,
         HeaderRowComponent,
+        HeaderSoftwareAndDevelopmentProcessComponent,
       ],
     }).compileComponents();
   }));

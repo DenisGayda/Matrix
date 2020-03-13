@@ -1,0 +1,13 @@
+{
+  "overview": {
+    "employee": "Employee",
+    "date": "Tech Interview Date",
+    "level": "Before assessment level",
+    "project": "Project",
+    "manager": "Project/Resource Manager",
+    "interviewer": "Interviewer"
+  },
+  "skills": {
+    "level": ["-", "None", "Novice", "Intermediate", "Advanced"]
+  }
+}

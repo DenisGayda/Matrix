@@ -1,5 +1,4 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { OverviewHeaderComponent } from './overview-header.component';
 
 describe('OverviewHeaderComponent', () => {

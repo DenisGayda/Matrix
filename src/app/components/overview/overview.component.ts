@@ -7,7 +7,6 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class OverviewComponent {
-
   // Move to service
   public overview: object[] = [
     {column1: 'Employee', column2: ''},
@@ -17,5 +16,4 @@ export class OverviewComponent {
     {column1: 'Project/Resource Manager', column2: ['', 'Василенко Виталий', 'Григорьев Александр', 'Педан Александр']},
     {column1: 'Interviewer', column2: ''},
   ];
-
 }

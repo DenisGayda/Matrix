@@ -1,12 +1,7 @@
-* {
-  font-family: serif;
-  box-sizing: border-box;
-  margin: 0;
-}
-
 .table {
+  font-family: serif;
   display: grid;
-  grid-template-columns: 15% 85%;
+  grid-template-columns: 20% 80%;
   text-align: right;
 
   & input {
@@ -25,5 +20,6 @@
   }
 }
 .info {
-  font-weight: bold;   
+  font-weight: bold;
+  font-family: serif;
 }

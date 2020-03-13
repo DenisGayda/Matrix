@@ -20,11 +20,9 @@ export class TableDataService {
 
     Object.keys(res).map(
       elem => {
-        if (typeof res[elem] === 'object') {
-          res[elem] = this.formatData(res[elem]);
-        } else {
+        typeof res[elem] === 'object' ?
+          res[elem] = this.formatData(res[elem]) :
           res = Object.values(res);
-        }
       });
     return res;
   }

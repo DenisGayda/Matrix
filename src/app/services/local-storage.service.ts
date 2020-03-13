@@ -5,7 +5,7 @@ export interface ILocalStorageItem {
   value: string;
 }
 
-const localStorageName = 'matrix-LS';
+const localStorageName = 'matrix-LS1';
 
 @Injectable({
   providedIn: 'root',

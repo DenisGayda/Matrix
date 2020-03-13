@@ -1,4 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Data } from '../table/configs/moke';
 
 @Component({
   selector: 'app-level-description-header',
@@ -6,4 +7,6 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
   styleUrls: ['./level-description-header.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class LevelDescriptionHeaderComponent { }
+export class LevelDescriptionHeaderComponent {
+  levelDescriptionHeader = Data.levelDescriptionHeader;
+}

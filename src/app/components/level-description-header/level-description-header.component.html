@@ -1,4 +1,7 @@
 <div class="table">
-  <input type="text" value="Level">
-  <input type="text" value="Description">
+
+  <ng-container *ngFor="let item of levelDescriptionHeader">
+    <input type="text" value="{{ item }}">
+  </ng-container>
+
 </div>

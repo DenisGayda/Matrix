@@ -1,4 +1,5 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
+import { Data } from './configs/moke';
 
 @Component({
   selector: 'app-table',
@@ -7,15 +8,6 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TableComponent {
-// массив временный, для проверки, пока не подключены сервисы от Стаса и Саши
-  levelDescription: object [] = [
-    {column1: '-', column2: '- опрос по этой теме во время интервью не производился'},
-    {column1: 'None', column2: '- нет знаний по теме'},
-    {column1: 'Novice', column2: '- требуется понимание сути навыка, теоретические знания основных понятий и минимальное проявление в работе (Базовые' +
-        ' неглубокие отрывочные знания хотябы по каким-то темам)'},
-    {column1: 'Intermediate', column2: '- хорошие знания теории по большинству подтем из темы, представляет как это применять на практике и имеет опыт' +
-        ' применения в работе (на субъективном уровне знает тему на уровне мидла)'},
-    {column1: 'Advanced', column2: '- глубокие знания по большинству подтем, разбирается в тонкостях, понимает как это применять, и или применял на практике' +
-        ' или без проблем сможет применить при неободимости (на субъективном уровне знает тему на уровне сеньера) '},
-  ];
+
+  levelDescription = Data.levelDescription;
 }

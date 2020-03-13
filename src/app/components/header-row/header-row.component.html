@@ -1,6 +1,6 @@
 <div class="table" >
 
-  <ng-container *ngFor="let item of makeArr()">
+  <ng-container *ngFor="let item of makeValuesArray()">
     <input type="text" value="{{ item }}" *ngIf="typeof(item); else select">
     <ng-template #select>
       <!--Будет компонент Алексея-->

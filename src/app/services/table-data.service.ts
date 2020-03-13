@@ -1,32 +1,31 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
 })
 export class TableDataService {
+  private url = 'assets/data.json';
+  constructor(private http: HttpClient) {}
 
-  public url = 'assets/data.json';
-  public data;
-
-  constructor(private http: HttpClient) {
-    //this.data = this.http.get(this.url)
-    // Object.defineProperty(this.data,'skills',{
-    //   enumerable: false,
-    //   configurable: false,
-    //   writable: false,
-    //   value: 'someval'
-    // })
+  public receiveData(sectionName: string): Observable<any> {
+    return this.http.get(this.url).pipe(
+      map( data => this.formatData(data[sectionName])));
   }
 
+  private formatData(limb) {
+    let res = JSON.parse(JSON.stringify(limb));
 
-  receiveData() {
-    return Object.defineProperty(this.http.get(this.url), 'skills', {
-      enumerable: false,
-      configurable:true,
-      writable:true,
-      value:{'level':147}
-    })
-    }
-
+    Object.keys(res).map(
+       elem => {
+         if (typeof res[elem] === 'object') {
+            res[elem] = this.formatData(res[elem]);
+          } else {
+           res = Object.values(res);
+          }
+      });
+     return res;
+   }
 }

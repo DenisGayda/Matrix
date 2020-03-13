@@ -9,17 +9,7 @@
   },
   "skills": {
     "level": ["-", "None", "Novice", "Intermediate", "Advanced"]
-  },
-  "test" : {
-    "innerTest" : {
-      "vova" : "vova",
-      "van9" : "van9",
-      "vika" : "vika"
-     },
-    "innerTest2" : {
-      "tu" : "tu",
-      "spelaya" : "spelaya",
-      "klubnika" : "lubnika"
-    }
   }
 }
+
+

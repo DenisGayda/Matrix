@@ -7,6 +7,7 @@ import { OverviewComponent } from './components/overview/overview.component';
 import { OverviewHeaderComponent } from './components/overview-header/overview-header.component';
 import { HeaderRowComponent } from './components/header-row/header-row.component';
 import { SelectComponent } from './components/select/select.component';
+import {DevelopmentComponent} from "./components/development/development.component";
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { SelectComponent } from './components/select/select.component';
     OverviewHeaderComponent,
     SelectComponent,
     HeaderRowComponent,
+    DevelopmentComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,28 @@
+* {
+  font-family: serif;
+  box-sizing: border-box;
+  margin: 0;
+  font-weigth: bold;
+}
+
+.table {
+  display: grid;
+  grid-template-columns: 50% 10% 10% 10% 20%;
+  text-align: right;
+
+  & input {
+    border: none;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: .2rem;
+    background-color: #FFF2CC;
+
+    &:first-child {
+      border-left: 1px solid black;
+    }
+  }
+
+  & input:focus {
+    border: 1px solid #00A3BB;
+  }
+}

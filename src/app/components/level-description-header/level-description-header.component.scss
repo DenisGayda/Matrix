@@ -1,15 +1,11 @@
-
-* {
-  font-family: serif;
-  box-sizing: border-box;
-  margin: 0;
-}
-
 .table {
   display: grid;
   grid-template-columns: 15% 85%;
   font-weight: bold;
   border: 1px solid black;
+  font-family: serif;
+  box-sizing: border-box;
+  margin: 0;
 
   & input {
     text-align: center;

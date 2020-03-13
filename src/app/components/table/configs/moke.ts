@@ -1,4 +1,3 @@
-
 export class Data {
   static levelDescription = [
     {column1: '-', column2: '- опрос по этой теме во время интервью не производился'},

@@ -1,5 +1,11 @@
 import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 
+interface IStringArray {
+  [index: number]: string;
+}
+
+type IisString = (item) => boolean;
+
 @Component({
   selector: 'app-header-row',
   templateUrl: './header-row.component.html',
@@ -10,13 +16,13 @@ import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 export class HeaderRowComponent {
   @Input() levelDescriptionValue;
 
-  valuesArray = [];
+  private valuesArray: IStringArray = this.levelDescriptionValue;
 
-  typeof(item) {
+  private isString: IisString = item => {
     return typeof item === 'string';
-  }
+  };
 
-  makeValuesArray() {
+  private makeValuesArray: () => IStringArray = () => {
     if (this.levelDescriptionValue) {
       this.valuesArray = Object.values(this.levelDescriptionValue);
     }

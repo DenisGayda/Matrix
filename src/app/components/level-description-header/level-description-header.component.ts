@@ -1,6 +1,10 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { Data } from '../table/configs/moke';
 
+interface ILevelDescriptionHeader {
+  [index: number]: string;
+}
+
 @Component({
   selector: 'app-level-description-header',
   templateUrl: './level-description-header.component.html',
@@ -8,5 +12,5 @@ import { Data } from '../table/configs/moke';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LevelDescriptionHeaderComponent {
-  levelDescriptionHeader = Data.levelDescriptionHeader;
+  private levelDescriptionHeader: ILevelDescriptionHeader = Data.levelDescriptionHeader;
 }

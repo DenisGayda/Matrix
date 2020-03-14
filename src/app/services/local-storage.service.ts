@@ -1,11 +1,9 @@
 import { Injectable } from '@angular/core';
 
-export interface ILocalStorageItem {
+export interface ILocalStorageItemInterface {
   id: number;
   value: string;
 }
-
-const localStorageName = 'matrix-LS1';
 
 @Injectable({
   providedIn: 'root',
@@ -13,22 +11,22 @@ const localStorageName = 'matrix-LS1';
 
 export class LocalStorageService {
 
-  public idKey = Date.now();
-  public localStorageArray = [];
+  public idKey: number = Date.now();
+  private localStorageName = 'matrix-local-storage';
+  private localStorageArray: ILocalStorageItemInterface[] = [];
 
-  getLocalStorage() {
-    return this.localStorageArray;
+  public getLocalStorage() {
+    return JSON.parse(localStorage.getItem(this.localStorageName));
   }
 
-  updateLocalStorage() {
-    localStorage.setItem(localStorageName, JSON.stringify(this.localStorageArray));
+  public updateLocalStorage() {
+    localStorage.setItem(this.localStorageName, JSON.stringify(this.localStorageArray));
 
     return this.getLocalStorage();
   }
 
-  addItemToLocalStorage(id) {
-    this.localStorageArray = [];
-    this.localStorageArray[0] = {...this.localStorageArray, id};
+  public addItemToLocalStorage(item: ILocalStorageItemInterface) {
+    this.localStorageArray = [...this.localStorageArray, item];
 
     return this.updateLocalStorage();
   }

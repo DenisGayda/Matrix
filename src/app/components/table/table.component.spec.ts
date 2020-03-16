@@ -3,6 +3,7 @@ import { TableComponent } from './table.component';
 import { LevelDescriptionHeaderComponent } from '../level-description-header/level-description-header.component';
 import { HeaderRowComponent } from '../header-row/header-row.component';
 import { SoftAndDevProcColumnComponent } from '../soft-and-dev-proc-column/soft-and-dev-proc-column.component';
+import { HeaderSoftDevComponent } from '../header-soft-dev/header-software-and-development-process.component';
 
 describe('TableComponent', () => {
   beforeEach(async(() => {
@@ -12,6 +13,7 @@ describe('TableComponent', () => {
         LevelDescriptionHeaderComponent,
         HeaderRowComponent,
         SoftAndDevProcColumnComponent,
+        HeaderSoftDevComponent,
       ],
     }).compileComponents();
   }));

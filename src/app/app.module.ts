@@ -4,8 +4,7 @@ import { AppComponent } from './app.component';
 import { TableComponent } from './components/table/table.component';
 import { LevelDescriptionHeaderComponent } from './components/level-description-header/level-description-header.component';
 import { HeaderRowComponent } from './components/header-row/header-row.component';
-// tslint:disable-next-line:max-line-length
-import { HeaderSoftwareAndDevelopmentProcessComponent } from './components/header-soft-dev/header-software-and-development-process.component';
+import { HeaderSoftDevComponent } from './components/header-soft-dev/header-software-and-development-process.component';
 
 @NgModule({
     declarations: [
@@ -13,7 +12,7 @@ import { HeaderSoftwareAndDevelopmentProcessComponent } from './components/heade
         TableComponent,
         LevelDescriptionHeaderComponent,
         HeaderRowComponent,
-        HeaderSoftwareAndDevelopmentProcessComponent,
+      HeaderSoftDevComponent,
     ],
   imports: [
     BrowserModule,

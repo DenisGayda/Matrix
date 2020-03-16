@@ -1,4 +1,7 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Data } from '../table/configs/moke';
+
+type IisString = (item) => boolean;
 
 @Component({
   selector: 'app-skills-row',
@@ -6,11 +9,10 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
   styleUrls: ['./skills-row.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class SkillsRowComponent implements OnInit {
+export class SkillsRowComponent {
+  skillsData = Data.skillsData;
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  private isString: IisString = item => {
+    return typeof item === 'string';
+  };
 }

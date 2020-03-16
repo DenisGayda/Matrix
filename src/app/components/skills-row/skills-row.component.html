@@ -1,1 +1,8 @@
-<p>skills-row works!</p>
+<div class="table">
+  <div *ngFor="let item of skillsData">
+    <ng-container *ngFor="let i of item">
+      <input type="text" value="{{ i }}" *ngIf="isString(i); else select">
+      <ng-template #select><select name="" id=""></select> <!--Будет компонент Алексея--></ng-template>
+    </ng-container>
+  </div>
+</div>

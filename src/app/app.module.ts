@@ -7,6 +7,7 @@ import { HeaderRowComponent } from './components/header-row/header-row.component
 // tslint:disable-next-line:max-line-length
 import { HeaderSoftwareAndDevelopmentProcessComponent } from './components/header-software-and-development-process/header-software-and-development-process.component';
 import { SoftAndDevProcColumnComponent } from './components/soft-and-dev-proc-column/soft-and-dev-proc-column.component';
+import { SkillsRowComponent } from './components/skills-row/skills-row.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { SoftAndDevProcColumnComponent } from './components/soft-and-dev-proc-co
     HeaderRowComponent,
     HeaderSoftwareAndDevelopmentProcessComponent,
     SoftAndDevProcColumnComponent,
+    SkillsRowComponent,
   ],
   imports: [
     BrowserModule,

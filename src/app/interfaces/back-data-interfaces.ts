@@ -1,4 +1,4 @@
-interface IOverviewTable {
+interface IOverviewData {
   employee: string;
   date: string;
   level: string;
@@ -6,6 +6,8 @@ interface IOverviewTable {
   manager: string;
   interviewer: string;
 }
-interface ISkillsTable {
+interface ISkillsData {
   level: string[];
 }
+
+export type jsonData = IOverviewData | ISkillsData;

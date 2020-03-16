@@ -12,5 +12,5 @@ interface ILevelDescriptionHeader {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LevelDescriptionHeaderComponent {
-  private levelDescriptionHeader: ILevelDescriptionHeader = Data.levelDescriptionHeader;
+  public levelDescriptionHeader: ILevelDescriptionHeader = Data.levelDescriptionHeader;
 }

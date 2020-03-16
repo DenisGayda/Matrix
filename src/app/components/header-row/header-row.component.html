@@ -1,6 +1,0 @@
-<div class="table" >
-  <ng-container *ngFor="let item of makeValuesArray()">
-    <input type="text" value="{{ item }}" *ngIf="isString(item); else select">
-    <ng-template #select><!--Будет компонент Алексея--></ng-template>
-  </ng-container>
-</div>

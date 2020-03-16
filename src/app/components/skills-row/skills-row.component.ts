@@ -1,7 +1,7 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { Data } from '../table/configs/moke';
 
-type IisString = (item) => boolean;
+type IIsString = (item) => string;
 
 @Component({
   selector: 'app-skills-row',
@@ -12,7 +12,11 @@ type IisString = (item) => boolean;
 export class SkillsRowComponent {
   skillsData = Data.skillsData;
 
-  private isString: IisString = item => {
-    return typeof item === 'string';
+  public isString: IIsString = item => {
+    if (Array.isArray(item)) {
+      return 'array';
+    } else if (typeof item === 'object' && !Array.isArray(item)) {
+      return 'object';
+    }
   };
 }

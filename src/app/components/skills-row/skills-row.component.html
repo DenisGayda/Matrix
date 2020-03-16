@@ -1,8 +1,11 @@
 <div class="table">
   <div *ngFor="let item of skillsData">
-    <ng-container *ngFor="let i of item">
-      <input type="text" value="{{ i }}" *ngIf="isString(i); else select">
-      <ng-template #select><select name="" id=""></select> <!--Будет компонент Алексея--></ng-template>
+    <ng-container *ngFor="let i of item" [ngSwitch]="isString(i)">
+      <ng-container *ngSwitchCase="'object'">
+        <div>временный текст</div><!--Будет новый компонент с инпутами-->
+      </ng-container>
+      <ng-container *ngSwitchCase="'array'"><select></select><!--Будет компонент Алексея--></ng-container>
+      <input type="text" value="{{ i }}" *ngSwitchDefault>
     </ng-container>
   </div>
 </div>

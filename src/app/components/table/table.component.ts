@@ -1,9 +1,4 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { Data } from './configs/moke';
-
-interface ITableComponent {
-  [index: number]: {};
-}
 
 @Component({
   selector: 'app-table',
@@ -12,5 +7,4 @@ interface ITableComponent {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TableComponent {
-  public levelDescription: ITableComponent = Data.levelDescription;
 }

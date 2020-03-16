@@ -2,6 +2,6 @@
   <input type="text" value="{{ column1 }}" class="info">
   <input type="text" value="{{ column2 }}" *ngIf="getType(column2); else select">
   <ng-template #select>
-    <app-select [arr]="column2"></app-select>
+    <app-select [array]="column2"></app-select>
   </ng-template>
 </div>

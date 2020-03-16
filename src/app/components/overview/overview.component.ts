@@ -8,5 +8,5 @@ import { TemporaryData } from '../table/configs/moke';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class OverviewComponent {
-    private overview: TemporaryData = TemporaryData.overview;
+    public overview: TemporaryData = TemporaryData.overview;
 }

@@ -10,7 +10,7 @@ import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 export class HeaderRowComponent {
   @Input() column1: string;
   @Input() column2: string | string[];
-  @Input() arr: string[];
+  @Input() array: string[];
 
   getType = (item): boolean => typeof item === 'string';
 }

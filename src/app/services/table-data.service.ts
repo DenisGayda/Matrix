@@ -18,15 +18,15 @@ export class TableDataService {
   }
 
   private formatData(limb: jsonData): tableData {
-    let res = Object.assign(limb);
+    let result = Object.assign(limb);
 
-    Object.keys(res).map(
+    Object.keys(result).map(
       elem => {
-        typeof res[elem] === 'object' ?
-          res[elem] = this.formatData(res[elem]) :
-          res = Object.values(res);
+        typeof result[elem] === 'object' ?
+          result[elem] = this.formatData(result[elem]) :
+          result = Object.values(result);
       });
 
-    return res;
+    return result;
   }
 }

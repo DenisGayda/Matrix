@@ -1,7 +1,7 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { Data } from '../table/configs/moke';
 
-type IIsString = (item) => string;
+type ICase = ([] | {} | string);
 
 @Component({
   selector: 'app-skills-row',
@@ -12,11 +12,14 @@ type IIsString = (item) => string;
 export class SkillsRowComponent {
   skillsData = Data.skillsData;
 
-  isString: IIsString = item => {
+  case(item: ICase): string {
     if (Array.isArray(item)) {
       return 'array';
-    } else if (typeof item === 'object' && !Array.isArray(item)) {
+    }
+    if (typeof item === 'object' && !Array.isArray(item)) {
       return 'object';
     }
-  };
+
+    return 'string';
+  }
 }

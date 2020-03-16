@@ -1,6 +1,6 @@
 <div class="table">
   <div *ngFor="let values of skillsData">
-    <ng-container *ngFor="let value of values" [ngSwitch]="isString(value)">
+    <ng-container *ngFor="let value of values" [ngSwitch]="case(value)">
       <ng-container *ngSwitchCase="'object'">
         <div>временный текст</div><!--Будет новый компонент с инпутами-->
       </ng-container>

@@ -12,5 +12,5 @@ interface ITableComponent {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TableComponent {
-  public levelDescription: ITableComponent = Data.levelDescription;
+  private levelDescription: ITableComponent = Data.levelDescription;
 }

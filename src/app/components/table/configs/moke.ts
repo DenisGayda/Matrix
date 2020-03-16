@@ -20,7 +20,4 @@ export class Data {
 
   static softwareAndDevelopmentProcessHeader = ['Software and Development Process', 'SKILLS', 'Self-assessment',
     'CURRENT LEVEL', 'NEXT LEVEL', 'COMMENTS', 'Literature'];
-
-  static sofAndDevProcColumn = ['Software Engineering Practices',
-    'Software Development Processes'];
 }

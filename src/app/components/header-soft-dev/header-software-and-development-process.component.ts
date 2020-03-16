@@ -8,9 +8,9 @@ interface IHeaderSADPC {
 @Component({
   selector: 'app-header-soft-dev',
   templateUrl: './header-soft-dev.component.html',
-  styleUrls: ['./header-soft-dev.component.scss'],
+  styleUrls: ['./header-software-and-development-process.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HeaderSoftDevComponent {
+export class HeaderSoftwareAndDevelopmentProcessComponent {
   public headerSADPC: IHeaderSADPC = Data.softwareAndDevelopmentProcessHeader;
 }

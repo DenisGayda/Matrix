@@ -12,7 +12,7 @@ type IIsString = (item) => string;
 export class SkillsRowComponent {
   skillsData = Data.skillsData;
 
-  public isString: IIsString = item => {
+  isString: IIsString = item => {
     if (Array.isArray(item)) {
       return 'array';
     } else if (typeof item === 'object' && !Array.isArray(item)) {

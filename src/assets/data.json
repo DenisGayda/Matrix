@@ -1,0 +1,135 @@
+{
+  "overview": {
+    "employee": "Employee",
+    "date": "Tech Interview Date",
+    "level": "Before assessment level",
+    "project": "Project",
+    "manager": "Project/Resource Manager",
+    "interviewer": "Interviewer"
+  },
+  "skills": {
+    "level": ["-", "None", "Novice", "Intermediate", "Advanced"]
+  },
+  "titles": ["SKILLS","Self-assessment","CURRENT LEVEL","NEXT LEVEL","COMMENTS","Literature"],
+  "Software and Development Process": {
+    "Software Engineering Practices": {
+      "Architecture knowledge": [
+        "OOP",
+        "Functional Programming",
+        "SOLID",
+        "Design Patterns",
+        "DDD",
+        "Event Sourcing",
+        "Microservices architechure",
+        "Architecture of highloaded applications"],
+      "Code Standards&Code Review Process": [
+        "Code Standards",
+        "Code Smells",
+        "Refactoring",
+        "Code Review Process&Experience"
+      ],
+      "Algorithms and data structures": [
+        "Big-O Notation for Algorithm Complexity",
+        "Data Structures",
+        "Basic fundamental algorithms",
+        "Data Science",
+        "Big Data",
+        "Machine Learning&AI"
+      ],
+      "Continuous Integration&Continuous Delivery & Deployment": [
+        "TFS",
+        "TeamCity",
+        "Jenkins",
+        "Build modes",
+        "Pull/Merge requests validation",
+        "SonarQube",
+        "Tests running",
+        "Build files transfer",
+        "Server build version update",
+        "Notifications"
+      ],
+      "Testing": [
+        "Unit Testing",
+        "Integration Testing",
+        "Automation Testing",
+        "Perfomance Testing",
+        "Security Testing",
+        "Testing Frameworks",
+        "Fakes",
+        "Attributes",
+        "Assertions",
+        "FluentAssertions",
+        "Gherkin",
+        "TDD",
+        "BDD",
+        "Reports"
+      ],
+      "Troubleshooting/Logging/Monitoring": [
+        "Debugging",
+        "Logging process",
+        "Profiling",
+        "Profilers"
+      ]
+    },
+    "Software Development Processes" : {
+      "Version Control System(Git,tfs...)": [
+        "Base principles vcs.",
+        "Git",
+        "Gitflow",
+        "tfs,svn and etc"
+      ],
+      "Estimations": [
+        "Estimations experience",
+        "Functionality points",
+        "Story points",
+        "Scrum pocker",
+        "Gantt Chart&Project Planning"
+      ],
+      "Development metodologies": [
+        "Agile",
+        "Scrum/Kanban Structure",
+        "Processes Documentation",
+        "Waterfall"
+      ]
+    }
+  },
+  "Development": {
+    "JS": [
+      "JS Basic",
+      "JS Advance",
+      "JS Asynchronous programming",
+      "Network interaction",
+      "JS Optimization",
+      "JS Design Patterns&Architecture",
+      "ES New features",
+      "Client-side storages&Caching"
+    ],
+    "Framework Knowledges / Angular": [
+      "Framework Basic",
+      "Framework Advance",
+      "Framework Features",
+      "Framework Routing",
+      "Framework Testing",
+      "Optimization&Perfomance CheckList"
+    ],
+    "HTML&CSS": [
+      "HTML",
+      "CSS Basics",
+      "CSS Advance"
+    ]
+  },
+  "Soft Skills": [
+    "English Level",
+    "Basic communication skills",
+    "Presentation skills",
+    "Continuous learning skills",
+    "Team player",
+    "Mentoring",
+    "Leadership"
+  ],
+  "Assessment Result": [
+    "Feedback",
+    "Feedback(Eng)",
+    "After interview level"
+  ]
+}

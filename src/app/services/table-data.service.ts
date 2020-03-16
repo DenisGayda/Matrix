@@ -21,9 +21,9 @@ export class TableDataService {
     let result = Object.assign(limb);
 
     Object.keys(result).map(
-      elem => {
-        typeof result[elem] === 'object' ?
-          result[elem] = this.formatData(result[elem]) :
+      element => {
+        typeof result[element] === 'object' ?
+          result[element] = this.formatData(result[element]) :
           result = Object.values(result);
       });
 

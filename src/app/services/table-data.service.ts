@@ -5,7 +5,6 @@ import { map } from 'rxjs/operators';
 import { tableData } from '../interfaces/fixed-table-data-interfaces';
 import { formatData } from '../../assets/formatData';
 
-
 @Injectable({
   providedIn: 'root',
 })

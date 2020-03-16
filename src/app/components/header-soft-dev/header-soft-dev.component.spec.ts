@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HeaderSoftwareAndDevelopmentProcessComponent } from './header-software-and-development-process.component';
+import { HeaderSoftDevComponent } from './header-software-and-development-process.component';
 
 describe('HeaderSoftwareAndDevelopmentProcessComponent', () => {
-  let component: HeaderSoftwareAndDevelopmentProcessComponent;
-  let fixture: ComponentFixture<HeaderSoftwareAndDevelopmentProcessComponent>;
+  let component: HeaderSoftDevComponent;
+  let fixture: ComponentFixture<HeaderSoftDevComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HeaderSoftwareAndDevelopmentProcessComponent ],
+      declarations: [ HeaderSoftDevComponent ],
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HeaderSoftwareAndDevelopmentProcessComponent);
+    fixture = TestBed.createComponent(HeaderSoftDevComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

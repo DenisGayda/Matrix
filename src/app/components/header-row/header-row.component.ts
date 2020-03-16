@@ -18,11 +18,11 @@ export class HeaderRowComponent {
 
   private valuesArray: IStringArray = this.levelDescriptionValue;
 
-  private isString: IisString = item => {
+  public isString: IisString = item => {
     return typeof item === 'string';
   };
 
-  private makeValuesArray: () => IStringArray = () => {
+  public makeValuesArray: () => IStringArray = () => {
     if (this.levelDescriptionValue) {
       this.valuesArray = Object.values(this.levelDescriptionValue);
     }

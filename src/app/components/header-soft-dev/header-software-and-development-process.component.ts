@@ -6,11 +6,11 @@ interface IHeaderSADPC {
 }
 
 @Component({
-  selector: 'app-header-software-and-development-process',
-  templateUrl: './header-software-and-development-process.component.html',
+  selector: 'app-header-soft-dev',
+  templateUrl: './header-soft-dev.component.html',
   styleUrls: ['./header-software-and-development-process.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeaderSoftwareAndDevelopmentProcessComponent {
-  private headerSADPC: IHeaderSADPC = Data.softwareAndDevelopmentProcessHeader;
+  public headerSADPC: IHeaderSADPC = Data.softwareAndDevelopmentProcessHeader;
 }

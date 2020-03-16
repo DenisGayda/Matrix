@@ -22,7 +22,7 @@ export class HeaderRowComponent {
 
   makeValuesArray(): IStringArray | string {
     if (this.levelDescriptionValue) {
-      this.valuesArray = Object.values(this.levelDescriptionValue);
+      return this.valuesArray = Object.values(this.levelDescriptionValue);
     }
 
     return this.valuesArray;

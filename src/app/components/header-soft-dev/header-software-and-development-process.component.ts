@@ -12,5 +12,5 @@ interface IHeaderSADPC {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeaderSoftDevComponent {
-  public headerSADPC: IHeaderSADPC = Data.softwareAndDevelopmentProcessHeader;
+  public headerSADPC: IHeaderSADPC | [] = Data.softwareAndDevelopmentProcessHeader;
 }

@@ -12,5 +12,5 @@ interface ISofAndDevProcColumn {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SoftAndDevProcColumnComponent {
-  public sofAndDevProcColumn: ISofAndDevProcColumn = Data.sofAndDevProcColumn;
+  public sofAndDevProcColumn: ISofAndDevProcColumn | [] = Data.sofAndDevProcColumn;
 }

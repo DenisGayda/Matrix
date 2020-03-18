@@ -1,0 +1,9 @@
+<select name="select" class="input" [formGroup]="selectForm">
+  <option
+    *ngFor="let item of array; let index = index"
+    formControlName="selectedValue"
+    [value]="index">
+    {{ item }}
+  </option>
+</select>
+<p>  {{ selectedValue }} </p>

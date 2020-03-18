@@ -7,7 +7,7 @@ describe('TableComponent', () => {
     TestBed.configureTestingModule({
       declarations: [
         TableComponent,
-        TextComponent
+        TextComponent,
       ],
     }).compileComponents();
   }));

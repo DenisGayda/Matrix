@@ -5,25 +5,19 @@ enum FieldTypes {
     CONTAINER = 'CONTAINER',
 }
 
-enum FieldSize {
-    LARGE = 'LARGE',
-    MEDIUM = 'MEDIUM',
-    SMALL = 'SMALL',
-}
-interface ISomeInterface {
+interface ICellInterface {
     value: string | string[];
     type: FieldTypes;
     options?: string[];
-    width?: FieldSize;
-    rows?: ISomeInterface[];
+    rows?: ICellInterface[];
 }
 
 interface ITableInterface {
-    header: ISomeInterface;
-    description: ISomeInterface;
-    hardSkills: ISomeInterface;
-    softSkills: ISomeInterface;
-    footer: ISomeInterface;
+    header: ICellInterface;
+    description: ICellInterface;
+    hardSkills: ICellInterface;
+    softSkills: ICellInterface;
+    footer: ICellInterface;
 }
 
 const skillLevels = ['-', 'None', 'Novice', 'Intermediate', 'Advanced'];
@@ -33,30 +27,25 @@ const mainRow = [
   {
     value: 'Self-assessment',
     type: FieldTypes.SELECT,
-    width: FieldSize.MEDIUM,
     options: [...skillLevels],
   },
   {
     value: 'CURRENT LEVEL',
     type: FieldTypes.SELECT,
-    width: FieldSize.MEDIUM,
     options: [...skillLevels],
   },
   {
     value: 'NEXT LEVEL',
     type: FieldTypes.SELECT,
-    width: FieldSize.MEDIUM,
     options: [...skillLevels],
   },
   {
     value: 'COMMENTS',
     type: FieldTypes.INPUT,
-    width: FieldSize.MEDIUM,
   },
   {
     value: 'Literature',
     type: FieldTypes.TEXT,
-    width: FieldSize.MEDIUM,
   },
 ];
 
@@ -173,59 +162,49 @@ export const table: ITableInterface = {
       {
         value: 'Software Engineering Practices',
         type: FieldTypes.TEXT,
-        width: FieldSize.MEDIUM,
         rows: [
           {
             value: 'Architecture knowledge',
             type: FieldTypes.TEXT,
-            width: FieldSize.MEDIUM,
             rows: [
               {
                 value: 'OOP',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
               {
                 value: 'Functional Programming',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
               {
                 value: 'SOLID',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
               {
                 value: 'Design Patterns',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
               {
                 value: 'DDD',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
               {
                 value: 'Event Sourcing',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
               {
                 value: 'Microservices architechure',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
               {
                 value: 'Architecture of highloaded applications',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
             ],
@@ -233,30 +212,25 @@ export const table: ITableInterface = {
           {
             value: 'Code Standards&Code Review Process',
             type: FieldTypes.TEXT,
-            width: FieldSize.MEDIUM,
             rows: [
               {
                 value: 'Code Standards',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
               {
                 value: 'Code Smells',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
               {
                 value: 'Refactoring',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
               {
                 value: 'Code Review Process&Experience',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
             ],
@@ -264,42 +238,35 @@ export const table: ITableInterface = {
           {
             value: 'Algorithms and data structures',
             type: FieldTypes.TEXT,
-            width: FieldSize.MEDIUM,
             rows: [
               {
                 value: 'Big-O Notation for Algorithm Complexity',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
               {
                 value: 'Data Structures',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
               {
                 value: 'Basic fundamental algorithms',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
               {
                 value: 'Data Science',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
               {
                 value: 'Big Data',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
               {
                 value: 'Machine Learning&AI',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
             ],
@@ -307,54 +274,45 @@ export const table: ITableInterface = {
           {
             value: 'Continuous Integration&Continuous Delivery & Deployment',
             type: FieldTypes.TEXT,
-            width: FieldSize.MEDIUM,
             rows: [
               {
                 value: 'TFS, TeamCity, Jenkins',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
               {
                 value: 'Build modes',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
               {
                 value: 'Pull/Merge requests validation',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
               {
                 value: 'SonarQube',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
               {
                 value: 'Tests running',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
               {
                 value: 'Build files transfer',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
               {
                 value: 'Server build version update',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
               {
                 value: 'Notifications',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
             ],
@@ -362,78 +320,65 @@ export const table: ITableInterface = {
           {
             value: 'Testing',
             type: FieldTypes.TEXT,
-            width: FieldSize.MEDIUM,
             rows: [
               {
                 value: 'Unit Testing',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
               {
                 value: 'Integration Testing',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
               {
                 value: 'Automation Testing',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
               {
                 value: 'Perfomance Testing',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
               {
                 value: 'Security Testing',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
               {
                 value: 'Testing Frameworks',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
               {
                 value: 'Fakes',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
               {
                 value: 'Attributes, Assertions, FluentAssertions',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
               {
                 value: 'Gherkin',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
               {
                 value: 'TDD',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
               {
                 value: 'BDD',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
               {
                 value: 'Reports',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
             ],
@@ -441,30 +386,25 @@ export const table: ITableInterface = {
           {
             value: 'Troubleshooting/Logging/Monitoring',
             type: FieldTypes.TEXT,
-            width: FieldSize.MEDIUM,
             rows: [
               {
                 value: 'Debugging',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
               {
                 value: 'Logging process',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
               {
                 value: 'Profiling',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
               {
                 value: 'Profilers',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
             ],
@@ -474,35 +414,29 @@ export const table: ITableInterface = {
       {
         value: 'Software Development Processes',
         type: FieldTypes.TEXT,
-        width: FieldSize.MEDIUM,
         rows: [
           {
             value: 'Version Control System(Git,tfs...)',
             type: FieldTypes.TEXT,
-            width: FieldSize.MEDIUM,
             rows: [
               {
                 value: 'Base principles vcs.',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
               {
                 value: 'Git',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
               {
                 value: 'Gitflow',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
               {
                 value: 'tfs,svn and etc',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
             ],
@@ -510,36 +444,30 @@ export const table: ITableInterface = {
           {
             value: 'Estimations',
             type: FieldTypes.TEXT,
-            width: FieldSize.MEDIUM,
             rows: [
               {
                 value: 'Estimations experience',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
               {
                 value: 'Functionality points',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
               {
                 value: 'Story points',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
               {
                 value: 'Scrum pocker',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
               {
                 value: 'Gantt Chart&Project Planning',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
             ],
@@ -547,30 +475,25 @@ export const table: ITableInterface = {
           {
             value: 'Development metodologies',
             type: FieldTypes.TEXT,
-            width: FieldSize.MEDIUM,
             rows: [
               {
                 value: 'Agile',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
               {
                 value: 'Scrum/Kanban Structure',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
               {
                 value: 'Processes Documentation',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
               {
                 value: 'Waterfall',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
             ],
@@ -580,59 +503,49 @@ export const table: ITableInterface = {
       {
         value: 'Development',
         type: FieldTypes.TEXT,
-        width: FieldSize.MEDIUM,
         rows: [
           {
             value: 'JS',
             type: FieldTypes.TEXT,
-            width: FieldSize.MEDIUM,
             rows: [
               {
                 value: 'JS Basic',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
               {
                 value: 'JS Advance',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
               {
                 value: 'JS Asynchronous programming',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
               {
                 value: 'Network interaction',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
               {
                 value: 'JS Optimization',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
               {
                 value: 'JS Design Patterns&Architecture',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
               {
                 value: 'ES New features',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
               {
                 value: 'Client-side storages&Caching',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
             ],
@@ -640,42 +553,35 @@ export const table: ITableInterface = {
           {
             value: 'Framework Knowledges / Angular',
             type: FieldTypes.TEXT,
-            width: FieldSize.MEDIUM,
             rows: [
               {
                 value: 'Framework Basic',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
               {
                 value: 'Framework Advance',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
               {
                 value: 'Framework Features',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
               {
                 value: 'Framework Routing',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
               {
                 value: 'Framework Testing',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
               {
                 value: 'Optimization&Perfomance CheckList',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
             ],
@@ -683,24 +589,20 @@ export const table: ITableInterface = {
           {
             value: 'HTML&CSS',
             type: FieldTypes.TEXT,
-            width: FieldSize.MEDIUM,
             rows: [
               {
                 value: 'HTML',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
               {
                 value: 'CSS Basics',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
               {
                 value: 'CSS Advance',
                 type: FieldTypes.TEXT,
-                width: FieldSize.MEDIUM,
                 rows: [...mainRow],
               },
             ],
@@ -716,43 +618,36 @@ export const table: ITableInterface = {
       {
         value: 'English Level',
         type: FieldTypes.TEXT,
-        width: FieldSize.MEDIUM,
         rows: [...mainRow],
       },
       {
         value: 'Basic communication skills',
         type: FieldTypes.TEXT,
-        width: FieldSize.MEDIUM,
         rows: [...mainRow],
       },
       {
         value: 'Presentation skills',
         type: FieldTypes.TEXT,
-        width: FieldSize.MEDIUM,
         rows: [...mainRow],
       },
       {
         value: 'Continuous learning skills',
         type: FieldTypes.TEXT,
-        width: FieldSize.MEDIUM,
         rows: [...mainRow],
       },
       {
         value: 'Team player',
         type: FieldTypes.TEXT,
-        width: FieldSize.MEDIUM,
         rows: [...mainRow],
       },
       {
         value: 'Mentoring',
         type: FieldTypes.TEXT,
-        width: FieldSize.MEDIUM,
         rows: [...mainRow],
       },
       {
         value: 'Leadership',
         type: FieldTypes.TEXT,
-        width: FieldSize.MEDIUM,
         rows: [...mainRow],
       },
 
@@ -795,5 +690,4 @@ export const table: ITableInterface = {
       },
     ],
   },
-// tslint:disable-next-line:max-file-line-count
 };

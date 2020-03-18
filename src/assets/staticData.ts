@@ -60,7 +60,7 @@ const mainRow = [
   },
 ];
 
-const table: ITableInterface = {
+export const table: ITableInterface = {
   header: {
         value: 'Overview',
         type: FieldTypes.CONTAINER,

@@ -1,7 +1,7 @@
 import { FieldTypes } from './FieldTypes';
-import { fieldTypeFinalTitles } from './fieldTypeFinalTitles';
+import { markTypesTitles } from './markTypesTitles';
 import { ITableInterface } from './ITableInterface';
-import { fieldTypeEnglishTitles } from './fieldTypeEnglishTitles';
+import { englishLevelTypesTitles } from './englishLevelTypesTitles';
 import { mainRow } from './mainRow';
 
 export const table: ITableInterface = {
@@ -580,17 +580,17 @@ export const table: ITableInterface = {
           {
             value: 'Self-assessment',
             type: FieldTypes.SELECT,
-            options: Object.values(fieldTypeEnglishTitles),
+            options: Object.values(englishLevelTypesTitles),
           },
           {
             value: 'CURRENT LEVEL',
             type: FieldTypes.SELECT,
-            options: Object.values(fieldTypeEnglishTitles),
+            options: Object.values(englishLevelTypesTitles),
           },
           {
             value: 'NEXT LEVEL',
             type: FieldTypes.SELECT,
-            options: Object.values(fieldTypeEnglishTitles),
+            options: Object.values(englishLevelTypesTitles),
           },
           {
             value: 'COMMENTS',
@@ -666,7 +666,7 @@ export const table: ITableInterface = {
           {
             value: '',
             type: FieldTypes.SELECT,
-            options: Object.values(fieldTypeFinalTitles),
+            options: Object.values(markTypesTitles),
           },
         ],
       },

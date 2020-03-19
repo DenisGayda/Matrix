@@ -1,21 +1,21 @@
 import { FieldTypes } from './FieldTypes';
-import { fieldTypeTitles } from './fieldTypeTitles';
+import { levelTypesTitles } from './levelTypesTitles';
 
 export const mainRow = [
   {
     value: 'Self-assessment',
     type: FieldTypes.SELECT,
-    options: Object.values(fieldTypeTitles),
+    options: Object.values(levelTypesTitles),
   },
   {
     value: 'CURRENT LEVEL',
     type: FieldTypes.SELECT,
-    options: Object.values(fieldTypeTitles),
+    options: Object.values(levelTypesTitles),
   },
   {
     value: 'NEXT LEVEL',
     type: FieldTypes.SELECT,
-    options: Object.values(fieldTypeTitles),
+    options: Object.values(levelTypesTitles),
   },
   {
     value: 'COMMENTS',

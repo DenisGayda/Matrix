@@ -1,3 +1,5 @@
+import { FieldTypes } from './FieldTypes';
+
 export interface ICellInterface {
   value: string | string[];
   type: FieldTypes;

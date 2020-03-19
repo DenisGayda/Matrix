@@ -1,4 +1,4 @@
-import { ICellInterface } from './CellInterface';
+import { ICellInterface } from './ICellInterface';
 
 export interface ITableInterface {
   header: ICellInterface;

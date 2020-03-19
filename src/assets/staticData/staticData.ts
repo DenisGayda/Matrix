@@ -1,6 +1,6 @@
 import { FieldTypes } from './FieldTypes';
 import { fieldTypeFinalTitles } from './fieldTypeFinalTitles';
-import { ITableInterface } from './TableInterface';
+import { ITableInterface } from './ITableInterface';
 import { fieldTypeEnglishTitles } from './fieldTypeEnglishTitles';
 import { mainRow } from './mainRow';
 

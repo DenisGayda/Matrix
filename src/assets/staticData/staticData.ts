@@ -1,53 +1,8 @@
-enum FieldTypes {
-    INPUT = 'INPUT',
-    TEXT = 'TEXT',
-    SELECT = 'SELECT',
-    CONTAINER = 'CONTAINER',
-}
-
-interface ICellInterface {
-    value: string | string[];
-    type: FieldTypes;
-    options?: string[];
-    rows?: ICellInterface[];
-}
-
-interface ITableInterface {
-    header: ICellInterface;
-    description: ICellInterface;
-    hardSkills: ICellInterface;
-    softSkills: ICellInterface;
-    footer: ICellInterface;
-}
-
-const skillLevels = ['-', 'None', 'Novice', 'Intermediate', 'Advanced'];
-const englishLevels = ['Elementary', 'Pre-Intermediate', 'Intermediate', 'Upper-intermediate', 'Advanced'];
-
-const mainRow = [
-  {
-    value: 'Self-assessment',
-    type: FieldTypes.SELECT,
-    options: [...skillLevels],
-  },
-  {
-    value: 'CURRENT LEVEL',
-    type: FieldTypes.SELECT,
-    options: [...skillLevels],
-  },
-  {
-    value: 'NEXT LEVEL',
-    type: FieldTypes.SELECT,
-    options: [...skillLevels],
-  },
-  {
-    value: 'COMMENTS',
-    type: FieldTypes.INPUT,
-  },
-  {
-    value: 'Literature',
-    type: FieldTypes.TEXT,
-  },
-];
+import { FieldTypes } from './FieldTypes';
+import { fieldTypeFinalTitles } from './fieldTypeFinalTitles';
+import { ITableInterface } from './TableInterface';
+import { fieldTypeEnglishTitles } from './fieldTypeEnglishTitles';
+import { mainRow } from './mainRow';
 
 export const table: ITableInterface = {
   header: {
@@ -621,7 +576,31 @@ export const table: ITableInterface = {
       {
         value: 'English Level',
         type: FieldTypes.TEXT,
-        rows: [...mainRow],
+        rows: [
+          {
+            value: 'Self-assessment',
+            type: FieldTypes.SELECT,
+            options: Object.values(fieldTypeEnglishTitles),
+          },
+          {
+            value: 'CURRENT LEVEL',
+            type: FieldTypes.SELECT,
+            options: Object.values(fieldTypeEnglishTitles),
+          },
+          {
+            value: 'NEXT LEVEL',
+            type: FieldTypes.SELECT,
+            options: Object.values(fieldTypeEnglishTitles),
+          },
+          {
+            value: 'COMMENTS',
+            type: FieldTypes.INPUT,
+          },
+          {
+            value: 'Literature',
+            type: FieldTypes.TEXT,
+          },
+        ],
       },
       {
         value: 'Basic communication skills',
@@ -687,7 +666,7 @@ export const table: ITableInterface = {
           {
             value: '',
             type: FieldTypes.SELECT,
-            options: ['J1', 'J2', 'J3', 'M1', 'M2', 'S', 'Ассесмент ранее не проводился', 'Trainee'],
+            options: Object.values(fieldTypeFinalTitles),
           },
         ],
       },

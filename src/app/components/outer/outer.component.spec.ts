@@ -1,5 +1,4 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { OuterComponent } from './outer.component';
 
 describe('OuterComponent', () => {

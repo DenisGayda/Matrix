@@ -6,7 +6,7 @@ import { mainRow } from './mainRow';
 
 export const table: ITableInterface = {
   header: {
-        value: 'Overview',
+        title: ['Overview'],
         type: FieldTypes.CONTAINER,
         rows: [
           {
@@ -62,7 +62,7 @@ export const table: ITableInterface = {
         ],
       },
   description: {
-    value: ['Level', 'Description'],
+    title: ['Level', 'Description'],
     type: FieldTypes.CONTAINER,
     rows: [
       {
@@ -114,7 +114,7 @@ export const table: ITableInterface = {
     ],
   },
   hardSkills: {
-    value: ['Software and Development Process', 'SKILLS', 'Self-assessment', 'CURRENT LEVEL', 'NEXT LEVEL', 'COMMENTS', 'Literature'],
+    title: ['Software and Development Process', 'SKILLS', 'Self-assessment', 'CURRENT LEVEL', 'NEXT LEVEL', 'COMMENTS', 'Literature'],
     type: FieldTypes.CONTAINER,
     rows: [
       {
@@ -570,7 +570,7 @@ export const table: ITableInterface = {
     ],
   },
   softSkills: {
-    value: 'Soft Skills',
+    title: ['Soft Skills'],
     type: FieldTypes.CONTAINER,
     rows: [
       {
@@ -636,7 +636,7 @@ export const table: ITableInterface = {
     ],
   },
   footer: {
-    value: 'Assessment Result',
+    title: ['Assessment Result'],
     type: FieldTypes.CONTAINER,
     rows: [
       {

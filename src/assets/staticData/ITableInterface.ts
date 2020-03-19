@@ -1,9 +1,9 @@
-import { ICellInterface } from './ICellInterface';
+import { IContainerInterface } from './IContainerInterface';
 
 export interface ITableInterface {
-  header: ICellInterface;
-  description: ICellInterface;
-  hardSkills: ICellInterface;
-  softSkills: ICellInterface;
-  footer: ICellInterface;
+  header: IContainerInterface;
+  description: IContainerInterface;
+  hardSkills: IContainerInterface;
+  softSkills: IContainerInterface;
+  footer: IContainerInterface;
 }

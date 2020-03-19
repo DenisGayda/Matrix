@@ -5,7 +5,7 @@ enum MarkTypes {
   M1 = 'M1',
   M2 = 'M2',
   S = 'S',
-  NO= 'NO',
+  NO = 'NO',
   TRAINEE= 'TRAINEE',
 }
 

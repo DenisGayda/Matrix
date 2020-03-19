@@ -1,5 +1,6 @@
 import { async, TestBed } from '@angular/core/testing';
 import { TableComponent } from './table.component';
+import { TextComponent } from '../text/text.component';
 import { SelectComponent } from '../select/select.component';
 
 describe('TableComponent', () => {
@@ -7,6 +8,7 @@ describe('TableComponent', () => {
     TestBed.configureTestingModule({
       declarations: [
         TableComponent,
+        TextComponent,
         SelectComponent,
       ],
     }).compileComponents();

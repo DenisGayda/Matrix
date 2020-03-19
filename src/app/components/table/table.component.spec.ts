@@ -1,6 +1,8 @@
 import { async, TestBed } from '@angular/core/testing';
 import { TableComponent } from './table.component';
 import { InputComponent } from '../input/input.component';
+import { TextComponent } from '../text/text.component';
+import { SelectComponent } from '../select/select.component';
 
 describe('TableComponent', () => {
   beforeEach(async(() => {
@@ -8,6 +10,8 @@ describe('TableComponent', () => {
       declarations: [
         TableComponent,
         InputComponent,
+        TextComponent,
+        SelectComponent,
       ],
     }).compileComponents();
   }));
